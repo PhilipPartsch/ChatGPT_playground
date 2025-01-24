@@ -3,8 +3,16 @@
 import os
 from openai import OpenAI
 
+try:
+    openai_api_key = os.environ.get("OPENAI_API_KEY")
+except KeyError:
+    openai_api_key = "Token not available!"
+    # or raise an error if it's not available so that the workflow fails
+
+openai_api_key = ''
+
 client = OpenAI(
-    api_key=os.environ.get("OPENAI_API_KEY"),  # This is the default and can be omitted
+    api_key=openai_api_key,
 )
 
 chat_completion = client.chat.completions.create(

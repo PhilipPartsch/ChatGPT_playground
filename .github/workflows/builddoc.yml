@@ -55,6 +55,11 @@ jobs:
       with:
         # github-pr-check, github-pr-review, github-check
         reporter: github-check
+    - name: Run script
+      env:
+        OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
+      run: |
+        python ./src/test.py
     - name: Test with pytest
       if: false
       # Job is disabled!
