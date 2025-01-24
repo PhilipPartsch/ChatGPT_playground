@@ -33,6 +33,9 @@ jobs:
     - name: print versions for debugging
       run: python --version ; pip --version ; whoami ; pwd
     - name: Install graphviz & default-jdk
+      # This is been needed for plantuml.
+      if: false
+      # Job is disabled!
       run: |
         sudo apt-get update
         sudo apt-get upgrade --yes

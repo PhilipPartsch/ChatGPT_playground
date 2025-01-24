@@ -1,2 +1,3 @@
+sphinx-lint
 vale
 sphinx-needs
