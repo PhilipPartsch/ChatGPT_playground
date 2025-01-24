@@ -26,3 +26,5 @@ chat_completion = client.chat.completions.create(
     model="gpt-4o-mini",
     #model="gpt-4o",
 )
+
+print(chat_completion)
