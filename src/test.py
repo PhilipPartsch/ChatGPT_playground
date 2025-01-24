@@ -9,8 +9,6 @@ except KeyError:
     openai_api_key = "Token not available!"
     # or raise an error if it's not available so that the workflow fails
 
-openai_api_key = ''
-
 client = OpenAI(
     api_key=openai_api_key,
 )
