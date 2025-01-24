@@ -20,5 +20,6 @@ chat_completion = client.chat.completions.create(
             "content": "Say this is a test",
         }
     ],
-    model="gpt-4o",
+    model="gpt-4o-mini",
+    #model="gpt-4o",
 )
