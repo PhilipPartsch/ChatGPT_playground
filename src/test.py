@@ -26,7 +26,8 @@ class Ai_Interaction:
         if len(self.last_used) > (self.RPD + 10): # if we are above day limit plus 10
             del self.last_used[0] # remove oldest entry
         self.last_used.append(datetime.now())
-        print("request " + str(len(self.last_used)) + ": at " + self.last_used[-1])
+
+        print("request " + str(len(self.last_used)) + ": at " + self.last_used[-1].strftime("%d.%m.%Y, %H:%M:%S"))
 
     def _get_amount_of_requests_in_last_minute(self):
         if len(self.last_used) == 0:
