@@ -23,30 +23,30 @@ class Ai_Interaction:
         self.client = OpenAI(api_key=openai_api_key,)
 
     def _add_request_to_list(self):
-        if len(last_used) > (RPD + 10): # if we are above day limit plus 10
-            del last_used[0] # remove oldest entry
-        last_used.append(datetime.now())
-        print("request " + len(last_used) + ": at " + last_used[-1])
+        if len(self.last_used) > (RPD + 10): # if we are above day limit plus 10
+            del self.last_used[0] # remove oldest entry
+        self.last_used.append(datetime.now())
+        print("request " + len(self.last_used) + ": at " + self.last_used[-1])
 
     def _get_amount_of_requests_in_last_minute(self):
-        if len(last_used) == 0:
+        if len(self.last_used) == 0:
             return 0
         else:
             amount_within_last_minute = 0
             now = datetime.now()
-            for i in last_used:
+            for i in self.last_used:
                 duration = now - i
                 if duration.total_seconds() < 61:
                     amount_within_last_minute = amount_within_last_minute + 1
             return amount_within_last_minute
 
     def _get_amount_of_requests_in_last_day(self):
-        if len(last_used) == 0:
+        if len(self.last_used) == 0:
             return 0
         else:
             amount_within_last_day = 0
             now = datetime.now()
-            for i in last_used:
+            for i in self.last_used:
                 duration = now - i
                 if duration.days < 1:
                     amount_within_last_day = amount_within_last_day + 1
@@ -54,13 +54,13 @@ class Ai_Interaction:
 
     def _wait_if_needed(self):
         while True:
-            if (self._get_amount_of_requests_in_last_minute() < self.RPM) and
-               (self._get_amount_of_requests_in_last_day() < self.RPD):
+            if self._get_amount_of_requests_in_last_minute() < self.RPM and \
+               self._get_amount_of_requests_in_last_day() < self.RPD:
                 break
             else:
                 time.sleep(10)
 
-    def request (self, task, request, )
+    def request (self, task, request, ):
         """Create requests to the AI and collect feedback."""
 
         # Links:
@@ -80,8 +80,8 @@ class Ai_Interaction:
 
         self._wait_if_needed()
 
-        chat_completion = client.chat.completions.create(
-            messages=: [
+        chat_completion = self.client.chat.completions.create(
+            messages= [
                 {
                 "role": "developer",
                 "content": [ {"type": "text", "text": task} ]
