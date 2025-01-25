@@ -103,8 +103,6 @@ class Ai_Interaction:
             # https://platform.openai.com/docs/api-reference/chat/create#chat-create-response_format
         )
 
-        print(chat_completion)
-
         self._add_request_to_list()
 
         return(chat_completion)
@@ -113,7 +111,7 @@ class Ai_Interaction:
 ai = Ai_Interaction()
 
 task = "Du bist eine Kinderbuch Autor."
-request = "Er stelle eine Liste von fünf Charakter für eine Weltraum-Piraten Geschichte. "
+request = "Erstelle eine Liste von fünf Charaktern für eine Weltraum-Piraten Geschichte. "
 
 response = ai.request(task, request, )
 
