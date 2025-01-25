@@ -23,7 +23,7 @@ class Ai_Interaction:
         self.client = OpenAI(api_key=openai_api_key,)
 
     def _add_request_to_list(self):
-        if len(self.last_used) > (RPD + 10): # if we are above day limit plus 10
+        if len(self.last_used) > (self.RPD + 10): # if we are above day limit plus 10
             del self.last_used[0] # remove oldest entry
         self.last_used.append(datetime.now())
         print("request " + len(self.last_used) + ": at " + self.last_used[-1])
