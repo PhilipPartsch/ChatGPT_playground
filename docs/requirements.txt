@@ -1,3 +1,5 @@
 sphinx-lint
 vale
 sphinx-needs
+matplotlib
+sphinx-rtd-theme
