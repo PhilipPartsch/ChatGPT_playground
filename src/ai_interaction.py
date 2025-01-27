@@ -106,13 +106,3 @@ class Ai_Interaction:
         self._add_request_to_list()
 
         return(chat_completion)
-
-
-ai = Ai_Interaction()
-
-task = "Du bist eine Kinderbuch Autor."
-request = "Erstelle eine Liste von fünf Charaktern für eine Weltraum-Piraten Geschichte. "
-
-response = ai.request(task, request, )
-
-print(response)
