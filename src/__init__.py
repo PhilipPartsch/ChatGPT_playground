@@ -1,1 +1,1 @@
-from ./ai_interaction import Ai_Interaction
+from ai_interaction import Ai_Interaction
