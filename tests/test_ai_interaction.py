@@ -26,6 +26,7 @@ sphinx_needs_test_spec = ''
 import sys
 import os
 sys.path.append(os.path.abspath('../src'))
+
 from ai_interaction import Ai_Interaction
 import pytest
 
