@@ -62,7 +62,7 @@ jobs:
       if: false
       # Job is disabled!
       run: |
-        python ./src/test.py
+        python ./tests/test_ai_interaction.py
     - name: Test with pytest
       run: |
         coverage run --branch --data-file=./docs/_static/_external_data/coverage.file -m pytest ./tests/ --junitxml=./docs/_static/_external_data/test_results.xml --report-log=./docs/_static/_external_data/test_log.json
