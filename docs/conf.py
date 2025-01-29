@@ -9,6 +9,11 @@ from sphinx_needs.api import add_dynamic_function
 sys.path.append(os.path.abspath('.'))
 import metamodel
 
+# -- For autodoc
+
+# For test:
+sys.path.append(os.path.abspath('../tests'))
+import test_ai_interaction
 
 # -- Project information
 
