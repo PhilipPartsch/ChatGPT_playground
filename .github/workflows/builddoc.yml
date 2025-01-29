@@ -56,14 +56,9 @@ jobs:
       with:
         # github-pr-check, github-pr-review, github-check
         reporter: github-check
-    - name: Run script
+    - name: Test with pytest
       env:
         OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
-      if: false
-      # Job is disabled!
-      run: |
-        python ./tests/test_ai_interaction.py
-    - name: Test with pytest
       run: |
         coverage run --branch --data-file=./docs/_static/_external_data/coverage.file -m pytest ./tests/ --junitxml=./docs/_static/_external_data/test_results.xml --report-log=./docs/_static/_external_data/test_log.json
         coverage xml --data-file=./docs/_static/_external_data/coverage.file -o ./docs/_static/_external_data/coverage.xml
