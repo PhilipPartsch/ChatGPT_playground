@@ -34,13 +34,12 @@ class Test_Ai_Interaction:
     def test_merge_dictionaries(self):
         """1. It shall be possible to get feedback from AI of requests."""
 
-        #ai = Ai_Interaction()
+        ai = Ai_Interaction()
 
         task = "Du bist eine Kinderbuch Autor."
         request = "Erstelle eine Liste von fünf Charaktern für eine Weltraum-Piraten Geschichte. "
 
-        #response = ai.request(task, request,)
-        response = "passed"
+        response = ai.request(task, request,)
 
         print(response)
 
