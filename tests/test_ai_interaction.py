@@ -9,7 +9,7 @@ sphinx_needs_test_spec = ''
    :status: verified
    :verified_by: TEST_RES_Ai_Interaction
 
-   This is a test specification for the module :need:`M_MERGE_DICTS`.
+   This is a test specification for the module : need : `M_ai_interaction`.
 
    **Test execution**
 
