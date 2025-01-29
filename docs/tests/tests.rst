@@ -1,19 +1,19 @@
-########################
-Tests for Ai_Interaction
-########################
+##########################
+Tests for `Ai_Interaction`
+##########################
 
 
-Test specification for Ai_Interaction
-*************************************
+Test specification for `Ai_Interaction`
+***************************************
 
 .. autodata:: test_ai_interaction.sphinx_needs_test_spec
 
 
 
-Test results for Ai_Interaction
-*******************************
+Test results for `Ai_Interaction`
+*********************************
 
-.. test-file:: Test Results for Ai_Interaction
+.. test-file:: Test Results for `Ai_Interaction`
    :file: _static/_external_data/test_results.xml
    :id: TEST_RES_Ai_Interaction
    :auto_suites:
@@ -21,8 +21,8 @@ Test results for Ai_Interaction
 
 
 
-Test log for Ai_Interaction
-***************************
+Test log for `Ai_Interaction`
+*****************************
 
 The logs can be found in different formats:
 
