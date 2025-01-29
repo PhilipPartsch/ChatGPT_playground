@@ -3,3 +3,5 @@ vale
 sphinx-needs
 matplotlib
 sphinx-rtd-theme
+sphinx-test-reports
+

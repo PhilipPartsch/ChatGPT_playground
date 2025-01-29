@@ -34,6 +34,8 @@ on_rtd = os.environ.get("READTHEDOCS") == "True"
 
 extensions = [
     'sphinx_needs',
+    'sphinx.ext.autodoc',
+    'sphinxcontrib.test_reports',
     #'sphinxcontrib.plantuml',
 ]
 
